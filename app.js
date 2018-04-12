@@ -9,8 +9,8 @@ const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
 const config = require('./config/config');
-const index = require('./routes/index');
-const users = require('./routes/users');
+const index = require('./routes/html/index');
+const users = require('./routes/api/users');
 
 // middlewares
 app.use(convert(bodyparser));
@@ -30,8 +30,8 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
 
-router.use('/api/', index.routes(), index.allowedMethods());
-router.use('/api/users', users.routes(), users.allowedMethods());
+router.use('/', index.routes(), index.allowedMethods());
+router.use('/api', users.routes(), users.allowedMethods());
 
 app.use(router.routes(), router.allowedMethods());
 // response

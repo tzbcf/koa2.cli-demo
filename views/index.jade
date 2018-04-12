@@ -1,7 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p JADE Welcome to #{title}
-  p #{a}
-  p= bb
+  div#content.login
+      div.ct-item
+          p
+            span 账号
+            input(type='text', placeholder='请输入用户名', id='userName')
+      div.ct-item
+          p
+              span 密码
+              input(type='password', placeholder='请输入用密码', id='password')
+      div.btn
+          button.btn-submit 登陆
+          button.btn-reg 注册
+  script(type='text/javascript', src='/js/index.js')

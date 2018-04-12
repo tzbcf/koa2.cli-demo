@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div#content.register
+        div.ct-item
+            p
+                span 账号
+                input(type='text', placeholder='请输入用户名', id='userName')
+        div.ct-item
+            p
+                span 密码
+                input(type='password', placeholder='请输入用密码', id='password')
+        div.ct-item
+            p
+                span 姓名
+                input(type='text', placeholder='请输入用姓名', id='name')
+        div.ct-item
+            p
+                span 身份证号
+                input(type='text', placeholder='请输入用身份证号', id='identityId')
+        div.ct-item
+            p
+                span 手机号
+                input(type='text', placeholder='请输入用手机号', id='phoneId')
+        div.btn
+            button.btn-reg 注册
+    script(type='text/javascript', src='/js/index.js')

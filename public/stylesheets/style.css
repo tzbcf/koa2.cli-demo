@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+p{
+    text-align: center;
+}
+.btn-submit,.btn-reg{
+    display: block;
+    width:100px;
+    margin:0 auto;
+}
